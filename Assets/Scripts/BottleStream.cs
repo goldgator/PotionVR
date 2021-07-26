@@ -8,6 +8,9 @@ public class BottleStream : MonoBehaviour
     private LineRenderer lineRenderer;
     private ParticleSystem splashParticle;
 
+    public string potionName;
+    private float timer = 0.0f;
+
     private Coroutine pourRoutine;
     private Vector3 targetPosition;
 
@@ -68,7 +71,26 @@ public class BottleStream : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.down);
 
         Physics.Raycast(ray, out hit, 2.0f);
-        Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(2.0f);
+        Vector3 endPoint;
+
+        if (hit.collider) {
+            endPoint = hit.point;
+            timer += Time.deltaTime;
+            Debug.Log(hit.collider.name);
+
+            if (timer > 1.0f)
+            {
+                Potion potion = hit.collider.GetComponent<Potion>();
+                if (potion) {
+                    Potion.PotionInfo info = PotionController.Instance.FindMix(potion.Info.colorName, potionName);
+                    if (info != null) potion.SetInfo(info);
+                    Debug.Log("Info changed: " + potion.Info.colorName + " / " + potionName);
+                }
+            }
+        } else {
+            endPoint = ray.GetPoint(2.0f);
+            timer = 0;
+        }
 
         return endPoint;
     }

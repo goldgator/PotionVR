@@ -52,6 +52,15 @@ public class PourDetector : MonoBehaviour
     private BottleStream CreateStream()
     {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
+
+        //TODO change materials and set potion info
+        Potion.PotionInfo info = GetComponent<Potion>().Info;
+
+        streamObject.GetComponent<BottleStream>().potionName = info.colorName;
+        streamObject.GetComponent<LineRenderer>().material = info.streamMaterial;
+        streamObject.GetComponentInChildren<ParticleSystemRenderer>().material = info.splashMaterial;
+
+
         return streamObject.GetComponent<BottleStream>();
     }
 }

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4737825085797511386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7629023119213187396}
+  - component: {fileID: 821814882727046686}
+  m_Layer: 0
+  m_Name: PotionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7629023119213187396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737825085797511386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4891934, y: -1.4090477, z: -0.60582304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &821814882727046686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737825085797511386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c525a286f14b2d4d8e9ee14e7ecda1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionEffects:
+  - colorName: Red
+    componentNames: []
+    fillMaterial: {fileID: 2100000, guid: e977b3c2e6b5353488f0a6f8ea08199f, type: 2}
+    splashMaterial: {fileID: 2100000, guid: 0678a74f45ba47947a757b12975f97ed, type: 2}
+    streamMaterial: {fileID: 2100000, guid: d632fa0bef9e33a4e88843c56a4e2be5, type: 2}
+    potionEffect: {fileID: 0}
+  - colorName: Blue
+    componentNames: []
+    fillMaterial: {fileID: 2100000, guid: 1900aabbf7e90da47baaa4ebdfa385a7, type: 2}
+    splashMaterial: {fileID: 2100000, guid: 5a0a9ff5980cb87438fb1e5f7b87c398, type: 2}
+    streamMaterial: {fileID: 2100000, guid: d36f632fb22b60940ae9c841ce261526, type: 2}
+    potionEffect: {fileID: 0}
+  - colorName: Yellow
+    componentNames: []
+    fillMaterial: {fileID: 2100000, guid: e9a4ff1fc5fdc934a99f886e72b7e441, type: 2}
+    splashMaterial: {fileID: 2100000, guid: e2761ec2507567049b24241ccf65636f, type: 2}
+    streamMaterial: {fileID: 2100000, guid: cd687020981126c45afa9ed2f5148e01, type: 2}
+    potionEffect: {fileID: 0}
+  - colorName: Purple
+    componentNames:
+    - Red
+    - Blue
+    fillMaterial: {fileID: 2100000, guid: 961ae7e01bbcaf44e928e71b2731f648, type: 2}
+    splashMaterial: {fileID: 2100000, guid: 4ba66e35a191eb549a959e84f0ffa32c, type: 2}
+    streamMaterial: {fileID: 2100000, guid: 83a50da567f977447ad52c3f1592fe80, type: 2}
+    potionEffect: {fileID: 0}
+  - colorName: Green
+    componentNames:
+    - Blue
+    - Yellow
+    fillMaterial: {fileID: 2100000, guid: e00be14f8864441479d6565ba796598f, type: 2}
+    splashMaterial: {fileID: 2100000, guid: 154221de5889bf344b4fa89d7889b4eb, type: 2}
+    streamMaterial: {fileID: 2100000, guid: 9caefb29021ae78498c18a588a77a874, type: 2}
+    potionEffect: {fileID: 0}
+  - colorName: Orange
+    componentNames:
+    - Red
+    - Yellow
+    fillMaterial: {fileID: 2100000, guid: 4ce54bc384a3847478a8226841d7e782, type: 2}
+    splashMaterial: {fileID: 2100000, guid: 7e5ae769076d4a74fbc4b7e512eab8d2, type: 2}
+    streamMaterial: {fileID: 2100000, guid: 76bc7c61fa606cd4a8d06fbd4f8f45c8, type: 2}
+    potionEffect: {fileID: 0}
