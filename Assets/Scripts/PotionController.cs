@@ -23,7 +23,7 @@ public class PotionController : MonoBehaviour
         {
             if (potion.componentNames.Count == 0) continue;
             if ((name1 == potion.componentNames[0] && name2 == potion.componentNames[1]) || 
-                (name2 == potion.componentNames[0] && name1 == potion.componentNames[0]))
+                (name2 == potion.componentNames[0] && name1 == potion.componentNames[1]))
             {
                 return potion;
             }

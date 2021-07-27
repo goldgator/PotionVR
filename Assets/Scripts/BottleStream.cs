@@ -84,7 +84,8 @@ public class BottleStream : MonoBehaviour
                 if (potion) {
                     Potion.PotionInfo info = PotionController.Instance.FindMix(potion.Info.colorName, potionName);
                     if (info != null) potion.SetInfo(info);
-                    Debug.Log("Info changed: " + potion.Info.colorName + " / " + potionName);
+                    Debug.Log("Info changed: " + info);
+                    //Debug.Log("Info changed: " + potion.Info.colorName + " / " + potionName);
                 }
             }
         } else {
