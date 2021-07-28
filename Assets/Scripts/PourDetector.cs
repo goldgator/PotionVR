@@ -46,7 +46,10 @@ public class PourDetector : MonoBehaviour
 
     private float CalculatePourAngle()
     {
-        return Mathf.Abs(transform.forward.y * Mathf.Rad2Deg);
+        Vector3 tipAngles = new Vector3(transform.rotation.eulerAngles.x, 0, transform.rotation.eulerAngles.z);
+        Quaternion tipQuat = Quaternion.Euler(tipAngles);
+
+        return Mathf.Abs(Quaternion.Angle(tipQuat, Quaternion.identity));
     }
 
     private BottleStream CreateStream()
