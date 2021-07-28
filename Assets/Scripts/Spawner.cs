@@ -7,7 +7,6 @@ public class Spawner : MonoBehaviour
     public bool spawnOnStart = true;
     public GameObject spawnedObject;
 
-
     private void Start()
     {
         if (spawnOnStart)
