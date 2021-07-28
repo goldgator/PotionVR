@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38be1bc8ba7fe844ac9aaa0f03e8adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakVelocity: 8
   fill: {fileID: 2585925542323302064}
   Info:
     colorName: Red
@@ -319,7 +320,8 @@ MonoBehaviour:
     fillMaterial: {fileID: 2100000, guid: e977b3c2e6b5353488f0a6f8ea08199f, type: 2}
     splashMaterial: {fileID: 2100000, guid: 0678a74f45ba47947a757b12975f97ed, type: 2}
     streamMaterial: {fileID: 2100000, guid: d632fa0bef9e33a4e88843c56a4e2be5, type: 2}
-    potionEffect: {fileID: 0}
+    potionEffect: {fileID: 4780065472405009840, guid: 453bebbdfc1e1584b96e2b1c73b16524,
+      type: 3}
 --- !u!65 &8722680381241642541
 BoxCollider:
   m_ObjectHideFlags: 0

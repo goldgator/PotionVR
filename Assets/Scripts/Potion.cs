@@ -17,7 +17,7 @@ public class Potion : MonoBehaviour
         public GameObject potionEffect;
     }
 
-
+    public float breakVelocity = 2f;
     public GameObject fill;
 
     [SerializeField]
@@ -27,6 +27,15 @@ public class Potion : MonoBehaviour
     {
         fill.GetComponent<MeshRenderer>().material = info.fillMaterial;
         Info = info;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.relativeVelocity.magnitude > breakVelocity)
+        {
+            Instantiate(Info.potionEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
 
