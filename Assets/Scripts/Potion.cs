@@ -31,6 +31,7 @@ public class Potion : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude > breakVelocity)
         {
             Instantiate(Info.potionEffect, transform.position, Quaternion.identity);

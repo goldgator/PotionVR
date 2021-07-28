@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38be1bc8ba7fe844ac9aaa0f03e8adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakVelocity: 8
+  breakVelocity: 1.5
   fill: {fileID: 6874733049625949325}
   Info:
     colorName: Blue
